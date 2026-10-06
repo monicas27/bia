@@ -18,7 +18,7 @@ RUN cd client && npm install --legacy-peer-deps --loglevel=error
 COPY . .
 
 # Build do front-end com Vite
-ARG VITE_API_URL=http://alb-bia-959292098.us-east-1.elb.amazonaws.com
+ARG VITE_API_URL= https://formacao.projeto-com-aws.com.br
 RUN cd client && VITE_API_URL=$VITE_API_URL npm run build
 
 # Limpeza das dependências de desenvolvimento do client para reduzir tamanho
